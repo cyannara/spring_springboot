@@ -51,6 +51,10 @@
 
 #### STS
 
+- https://spring.io/tools
+
+spring-tools-for-eclipse-4.30.0.RELEASE-e4.35.0-win32.win32.x86_64.zip
+
 #### Lombok
 
 https://projectlombok.org/setup/maven

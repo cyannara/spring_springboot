@@ -1,53 +1,32 @@
 ### 강의
 
-| 일  | 수업         |
-| :-- | :----------- |
-| 1   | DI           |
-| 2   | AOP          |
-| 3   | MyBatis      |
-| 4   | JPA          |
-| 5   | MVC          |
-| 6   | 실습-게시판  |
-| 7   | REST API     |
-| 8   | 실습-댓글    |
-| 9   | 개인프로젝트 |
-| 10  | springboot   |
-| 11  | ThymeLeaf    |
-| 12  | security     |
-| 13  | 개인프로젝트 |
-| 14  | eGovFrame    |
-| 15  | eGovFrame    |
-| 16  | 시험         |
-
-### 스프링을 왜 쓰는가?
-
-- Microservices
-- Reactive
-- Event Driven
-- Cloud
-- Web Applications
-- Serverless
-- Batch
-
-### 스프링 웹 애플리케이션 개발
-
-- 스프링 프레임워크
-- 스프링 데이터
-- Mybatis
-- 스프링 시큐리티
-- 스프링 배치
-- 서버사이트템플릿엔진( Thymeleaf )
-
-### 스프링 프레임워크
-
-- DI
-- AOP
-- MVC
-- JDBC
-
-<img src="./images/springcontext_dependency.png"/>
+| 일  | 수업          | 수업폴더             | 실습폴더      | 패키지                |
+| :-- | :------------ | :------------------- | :------------ | :-------------------- |
+| 1   | maven, gradle | sp01mvn , sp02gradle |               | com.yedam.app.demo    |
+| 2   | DI            | sp02di               | work01di      | com.yedam.app.di      |
+| 3   | AOP           | sp03aop              | work02aop     | com.yedam.app.aop     |
+| 4   | MyBatis       | sp04mybatis          |               | com.yedam.app.mybatis |
+| 5   | JPA           | sp05jpa              |               | com.yedam.app.jpa     |
+| 6   | MVC           | sp06mvc              |               | com.yedam.app.mvc     |
+| 7   | 실습-게시판   | sp07boad             |               |                       |
+| 8   | REST API      | sp08rest             |               |                       |
+| 9   | 실습-댓글     | sp09reply            |               |                       |
+| 10  | 개인프로젝트  |                      | work10project |                       |
+| 11  | springboot    | boot11               |               |                       |
+| 12  | ThymeLeaf     |                      |               |                       |
+| 13  | security      | boot13securiy        |               |                       |
+| 14  | 개인프로젝트  |                      | work14project |                       |
+| 15  | eGovFrame     | egov                 |               |                       |
+| 16  | eGovFrame     |                      |               |                       |
+| 17  | 시험          | exam01               |               |                       |
 
 ### 개발환경
+
+- maven
+- gradle
+- spring : eGovFrame 4.3 (Eclipse 2024-03 (4.31.0) 적용, Lombok 포함)
+
+#### eGovFrame
 
 #### STS
 
@@ -121,4 +100,27 @@ eclipse.ini
 		</resources>
 	</build>
 </project>
+```
+
+mvn archetype:generate -DgroupId=com.yedam.app -DartifactId=demo1 -DarchetypeArtifactId=maven-archetype-quickstart -DarchetypeVersion=1.5 -DinteractiveMode=false
+
+### maven
+
+| 명령어   | 설명                          |
+| :------- | :---------------------------- |
+| clean    | target 폴더 삭제              |
+| validate | 프로젝트 구조/설정 확인       |
+| compile  | 자바 코드 컴파일(target 폴더) |
+| test     | 단위 테스트 수행              |
+| package  | .jar .war 등 패키징           |
+| verify   | 패키지 검증                   |
+| install  | 로컬 저장소에 설치(.m2)       |
+| deploy   | 원격저장소에 업로드           |
+
+validate → compile → test → package → verify → install → deploy
+
+```
+> tree /f target
+> nvm clean package
+> npm install
 ```

@@ -20,6 +20,34 @@
 | 16  | eGovFrame     |                      |               |                       |
 | 17  | 시험          | exam01               |               |                       |
 
+### 스프링을 왜 쓰는가?
+
+- Microservices
+- Reactive
+- Event Driven
+- Cloud
+- Web Applications
+- Serverless
+- Batch
+
+### 스프링 웹 애플리케이션 개발
+
+- 스프링 프레임워크
+- 스프링 데이터
+- Mybatis
+- 스프링 시큐리티
+- 스프링 배치
+- 서버사이트템플릿엔진( Thymeleaf )
+
+### 스프링 프레임워크
+
+- DI
+- AOP
+- MVC
+- JDBC
+
+<img src="./images/springcontext_dependency.png"/>
+
 ### 개발환경
 
 - maven
@@ -102,25 +130,50 @@ eclipse.ini
 </project>
 ```
 
-mvn archetype:generate -DgroupId=com.yedam.app -DartifactId=demo1 -DarchetypeArtifactId=maven-archetype-quickstart -DarchetypeVersion=1.5 -DinteractiveMode=false
-
-### maven
-
-| 명령어   | 설명                          |
-| :------- | :---------------------------- |
-| clean    | target 폴더 삭제              |
-| validate | 프로젝트 구조/설정 확인       |
-| compile  | 자바 코드 컴파일(target 폴더) |
-| test     | 단위 테스트 수행              |
-| package  | .jar .war 등 패키징           |
-| verify   | 패키지 검증                   |
-| install  | 로컬 저장소에 설치(.m2)       |
-| deploy   | 원격저장소에 업로드           |
-
-validate → compile → test → package → verify → install → deploy
-
-```
-> tree /f target
-> nvm clean package
-> npm install
+```xml
+<build>
+    <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
+      <plugins>
+        <!-- clean lifecycle, see https://maven.apache.org/ref/current/maven-core/lifecycles.html#clean_Lifecycle -->
+        <plugin>
+          <artifactId>maven-clean-plugin</artifactId>
+          <version>3.1.0</version>
+        </plugin>
+        <!-- default lifecycle, jar packaging: see https://maven.apache.org/ref/current/maven-core/default-bindings.html#Plugin_bindings_for_jar_packaging -->
+        <plugin>
+          <artifactId>maven-resources-plugin</artifactId>
+          <version>3.0.2</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-compiler-plugin</artifactId>
+          <version>3.8.0</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-surefire-plugin</artifactId>
+          <version>2.22.1</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-jar-plugin</artifactId>
+          <version>3.0.2</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-install-plugin</artifactId>
+          <version>2.5.2</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-deploy-plugin</artifactId>
+          <version>2.8.2</version>
+        </plugin>
+        <!-- site lifecycle, see https://maven.apache.org/ref/current/maven-core/lifecycles.html#site_Lifecycle -->
+        <plugin>
+          <artifactId>maven-site-plugin</artifactId>
+          <version>3.7.1</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-project-info-reports-plugin</artifactId>
+          <version>3.0.0</version>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+  </build>
 ```

@@ -1,6 +1,7 @@
 package di;
 
 public class SamsungTV implements TV {
+	
 	private Speaker speaker;
 
 	public SamsungTV() {

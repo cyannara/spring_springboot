@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+		https://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context
+		https://www.springframework.org/schema/context/spring-context.xsd">
+	
+	<!--1. Restaurant 에 Chef 주입되도록 아래의 bean 설정을 변경  -->
+	<!--2. App을 실행했을 때 오류없이 'cook' 메시지가 출력되면 됨  -->
+	<bean id="restaurant" class="com.yedam.ex01.Restaurant"></bean>
+	
+</beans>		

@@ -9,7 +9,7 @@ public class App
     {
 
     	ApplicationContext ctx = new AnnotationConfigApplicationContext(Ex03Configure.class);
-    	Restaurant restarurant = (Restaurant)ctx.getBean("restaurant");
-		restarurant.getChef().cook();
+    	Restaurant restarrant = (Restaurant)ctx.getBean("restaurant");
+		//restarurant.getChef().cook();
     }
 }

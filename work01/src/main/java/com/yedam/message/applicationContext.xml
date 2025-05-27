@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- object create  -->
+	<bean id="email" class="ex05.di.message.EmailMessageServiceImpl" />
+	<bean id="twitter"  class="ex05.di.message.TwitterMessageServiceImpl" />
+	
+	<!-- constructor 이용한 설정 -->
+	<bean id="myApplication"  class="com.yedam.message.MyApplication">
+		<constructor-arg  ref="email" />
+	</bean>
+	
+	<!-- setter method -->
+	<bean id="myApplication2"  class="com.yedam.message.MyApplication">
+		<property name="service"  ref="twitter" />
+	</bean>
+
+</beans>

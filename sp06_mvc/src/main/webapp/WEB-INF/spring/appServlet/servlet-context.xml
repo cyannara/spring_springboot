@@ -23,6 +23,7 @@
 	
 	<context:component-scan base-package="com.yedam.web" />
 	
-	
+	<beans:bean id="multipartResolver"
+      class="org.springframework.web.multipart.support.StandardServletMultipartResolver" />
 	
 </beans:beans>

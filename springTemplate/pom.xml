@@ -14,6 +14,7 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<springframework.version>6.2.7</springframework.version>
+		<org.aspectj-version>1.9.24</org.aspectj-version>
 	</properties>
 
 	<dependencies>
@@ -27,13 +28,30 @@
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-test</artifactId>
 			<version>${springframework.version}</version>
-		</dependency>		
+		</dependency>
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-jdbc</artifactId>
 			<version>${springframework.version}</version>
 		</dependency>
-
+		<!-- aop -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-aop</artifactId>
+			<version>${springframework.version}</version>
+		</dependency>
+		<!-- aspectjrt -->
+		<dependency>
+			<groupId>org.aspectj</groupId>
+			<artifactId>aspectjrt</artifactId>
+			<version>1.9.24</version>
+			<scope>runtime</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.aspectj</groupId>
+			<artifactId>aspectjweaver</artifactId>
+			<version>${org.aspectj-version}</version>
+		</dependency>
 
 		<!-- ojdbc  -->
 		<dependency>
@@ -46,25 +64,25 @@
 			<groupId>com.zaxxer</groupId>
 			<artifactId>HikariCP</artifactId>
 			<version>6.3.0</version>
-		</dependency>		
-				
-				
-	    <!-- JPA / hibernate  -->
+		</dependency>
+
+
+		<!-- JPA / hibernate  -->
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-orm</artifactId>
 			<version>${springframework.version}</version>
 		</dependency>
-	    <dependency>
-	        <groupId>jakarta.persistence</groupId>
-	        <artifactId>jakarta.persistence-api</artifactId>
-	        <version>3.1.0</version>
-	    </dependency>
-	    <dependency>
-	        <groupId>org.hibernate.orm</groupId>
-	        <artifactId>hibernate-core</artifactId>
-	        <version>6.4.4.Final</version>
-	    </dependency>
+		<dependency>
+			<groupId>jakarta.persistence</groupId>
+			<artifactId>jakarta.persistence-api</artifactId>
+			<version>3.1.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.hibernate.orm</groupId>
+			<artifactId>hibernate-core</artifactId>
+			<version>6.4.4.Final</version>
+		</dependency>
 
 
 		<!-- mybatis-spring -->
@@ -80,19 +98,19 @@
 		</dependency>
 		<!-- jdbc 로그 -->
 		<dependency>
-		  <groupId>org.bgee.log4jdbc-log4j2</groupId>
-		  <artifactId>log4jdbc-log4j2-jdbc4.1</artifactId>
-		  <version>1.16</version>
+			<groupId>org.bgee.log4jdbc-log4j2</groupId>
+			<artifactId>log4jdbc-log4j2-jdbc4.1</artifactId>
+			<version>1.16</version>
 		</dependency>
-		
-				
-	    <!-- jackson-databind -->
+
+
+		<!-- jackson-databind -->
 		<dependency>
 			<groupId>com.fasterxml.jackson.core</groupId>
 			<artifactId>jackson-databind</artifactId>
 			<version>2.19.0</version>
 		</dependency>
-		
+
 		<!-- SLF4J → Log4j Bridge (Spring은 SLF4J를 통해 로깅) -->
 		<dependency>
 			<groupId>org.apache.logging.log4j</groupId>
@@ -111,21 +129,21 @@
 			<artifactId>jakarta.servlet.jsp.jstl</artifactId>
 			<version>3.0.1</version>
 		</dependency>
-					
+
 		<!-- junit  -->
 		<dependency>
-		    <groupId>org.junit.jupiter</groupId>
-		    <artifactId>junit-jupiter-api</artifactId>
-		    <version>5.12.2</version>
-		    <scope>test</scope>
+			<groupId>org.junit.jupiter</groupId>
+			<artifactId>junit-jupiter-api</artifactId>
+			<version>5.12.2</version>
+			<scope>test</scope>
 		</dependency>
-							
-		<!-- lombok  -->	
+
+		<!-- lombok  -->
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
 			<version>1.18.38</version>
 			<scope>provided</scope>
-		</dependency>			
+		</dependency>
 	</dependencies>
 </project>

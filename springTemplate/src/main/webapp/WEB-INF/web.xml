@@ -26,8 +26,11 @@ version="6.0">
       <param-name>contextConfigLocation</param-name>
       <param-value>/WEB-INF/spring/appServlet/servlet-context.xml</param-value>
     </init-param>
-    <load-on-startup>1</load-on-startup>
-    
+    <init-param>
+      <param-name>throwExceptionIfNoHandlerfound</param-name>
+      <param-value>true</param-value>
+    </init-param>
+    <load-on-startup>1</load-on-startup>    
     <multipart-config>
     	<location>c:/Temp</location>
     	<max-file-size>2097518</max-file-size>

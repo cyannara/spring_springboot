@@ -11,8 +11,8 @@ http://www.springframework.org/schema/tx https://www.springframework.org/schema/
 
   <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
 	<property name="dataSource" ref="dataSource"></property>
-	<!-- <property name=""></property> -->
 	<property name="mapperLocations" value="classpath:mapper/*.xml" />
+	<property name="configLocation" value="classpath:sql-map-config.xml" />
   </bean>
 
   <mybatis-spring:scan base-package="com.yedam.**.mapper"></mybatis-spring:scan>

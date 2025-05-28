@@ -3,3 +3,8 @@ bin/
 .settings/
 .project
 .classpath
+/.metadata/
+Servers/
+.factorypath
+egov/
+sp06_mvc_tomcat9/

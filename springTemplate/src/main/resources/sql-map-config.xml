@@ -8,7 +8,7 @@
 
 	<!-- Alias 설정 -->
 	<typeAliases>
-		<typeAlias alias="board" type="com.springbook.board.BoardVO" />
+		<!--  <typeAlias alias="board" type="com.springbook.board.BoardVO" /> -->
 		<package name="com.yedam"/>
 	</typeAliases>
 	<typeHandlers>

@@ -23,13 +23,18 @@
 		</Logger>
 
 		<!-- WARN 로그들 -->
-		<Logger name="jdbc.audit" level="warn" additivity="false">
+		<Logger name="jdbc.connection" level="off" additivity="false">
+			<AppenderRef ref="Console" />
+		</Logger>
+				
+		<Logger name="jdbc.audit" level="off" additivity="false">
 			<AppenderRef ref="Console" />
 		</Logger>
 
-		<Logger name="jdbc.resultset" level="warn" additivity="false">
+		<Logger name="jdbc.resultset" level="off" additivity="false">
 			<AppenderRef ref="Console" />
 		</Logger>
+		
 		<Root level="info">
 			<AppenderRef ref="Console" />
 		</Root>

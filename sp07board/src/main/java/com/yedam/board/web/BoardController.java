@@ -12,7 +12,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import com.yedam.board.service.BoardService;
 import com.yedam.board.service.BoardVO;
 import com.yedam.board.service.Criteria;
-import com.yedam.board.service.PageDTO;
+import com.yedam.common.PageDTO;
 
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -25,49 +25,24 @@ public class BoardController {
 
 	private BoardService service;
 
-	@GetMapping("/register")
-	public void register() {
-
-	}
-
-	// @GetMapping("/list")
-	// public void list(Model model) {
-	//
-	// log.info("list");
-	// model.addAttribute("list", service.getList());
-	//
-	// }
-
-	// @GetMapping("/list")
-	// public void list(Criteria cri, Model model) {
-	//
-	// log.info("list: " + cri);
-	// model.addAttribute("list", service.getList(cri));
-	//
-	// }
-
 	@GetMapping("/list")
 	public void list(Criteria cri, Model model) {
 
-		log.info("list: " + cri);
 		model.addAttribute("list", service.getList(cri));
-		// model.addAttribute("pageMaker", new PageDTO(cri, 123));
 
+		//paing 처리
 		int total = service.getTotal(cri);
-
-		log.info("total: " + total);
-
 		model.addAttribute("pageMaker", new PageDTO(cri, total));
 
 	}
+	
+	@GetMapping("/register")
+	public void register() { }
 
 	@PostMapping("/register")
 	public String register(BoardVO board, RedirectAttributes rttr) {
 
-		log.info("register: " + board);
-
 		service.register(board);
-
 		rttr.addFlashAttribute("result", board.getBno());
 
 		return "redirect:/board/list";

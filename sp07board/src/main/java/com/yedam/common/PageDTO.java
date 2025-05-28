@@ -1,4 +1,6 @@
-package com.yedam.board.service;
+package com.yedam.common;
+
+import com.yedam.board.service.Criteria;
 
 import lombok.Getter;
 import lombok.ToString;

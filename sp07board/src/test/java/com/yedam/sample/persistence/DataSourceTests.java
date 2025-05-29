@@ -8,7 +8,7 @@ import javax.sql.DataSource;
 
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
@@ -17,10 +17,9 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
 import lombok.Setter;
 import lombok.extern.log4j.Log4j2;
 
-@ExtendWith(SpringExtension.class) 
-@ContextConfiguration("file:src/main/webapp/WEB-INF/spring/root-context.xml")
-
 @Log4j2
+@ExtendWith(SpringExtension.class) 
+@ContextConfiguration("file:src/main/resources/spring/*-context.xml")
 public class DataSourceTests {
 
   @Setter(onMethod_ = { @Autowired })
@@ -48,7 +47,6 @@ public class DataSourceTests {
 
   @Test
   public void testConnection() {
-    
     
     try (Connection con = dataSource.getConnection()){
 

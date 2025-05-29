@@ -1,27 +1,22 @@
-package com.yedam.sample.mapper;
-
-import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.log;
+package com.yedam.board.mapper;
 
 import java.util.List;
 
-import org.junit.Test;
-import org.junit.runner.RunWith;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
-import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.springframework.test.context.junit.jupiter.SpringExtension;
 
-import com.yedam.board.mapper.BoardMapper;
 import com.yedam.board.service.BoardVO;
 import com.yedam.board.service.Criteria;
 
 import lombok.Setter;
-import lombok.extern.slf4j.Slf4j;
+import lombok.extern.log4j.Log4j2;
 
-@RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration("file:src/main/webapp/WEB-INF/spring/root-context.xml")
-// Java Config
-// @ContextConfiguration(classes = {org.zerock.config.RootConfig.class} )
-@Slf4j
+@Log4j2
+@ExtendWith(SpringExtension.class) 
+@ContextConfiguration("file:src/main/resources/spring/*-context.xml")
 public class BoardMapperTests {
 
 	@Setter(onMethod_ = @Autowired)

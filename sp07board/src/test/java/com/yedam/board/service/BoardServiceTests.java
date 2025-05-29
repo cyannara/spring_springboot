@@ -1,4 +1,4 @@
-package com.yedam.sample.service;
+package com.yedam.board.service;
 
 import static org.junit.Assert.assertNotNull;
 

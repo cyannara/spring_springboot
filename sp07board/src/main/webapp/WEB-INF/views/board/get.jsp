@@ -77,8 +77,8 @@
   <div>
       <!-- 댓글 입력 폼 -->
     <div class="mb-3">
-      <textarea class="form-control mb-2" rows="3" placeholder="댓글을 입력하세요..."></textarea>
-      <button class="btn btn-primary">댓글 작성</button>
+      <textarea class="form-control mb-2" id="txtReply" rows="3" placeholder="댓글을 입력하세요..."></textarea>
+      <button class="btn btn-primary" id="btnReplyAdd" >댓글 작성</button>
     </div>
 
     <hr>
@@ -110,6 +110,16 @@
   </div>
 </div>
 <!-- /.row -->
+
+<script src="/resources/js/get.js"></script>    
+<script>
+	document.querySelector("#btnReplyAdd")
+	  .addEventListener("click", ()=>{
+		const reply = document.querySelector("#txtReply").value;
+		const data = { reply , replyer:"홍길동"  }
+		register(data)
+	})
+</script>
 
 <script type="text/javascript">
 $(document).ready(function() {

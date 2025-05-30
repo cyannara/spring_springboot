@@ -62,7 +62,6 @@
   <input type='hidden' name='amount' value='<c:out value="${cri.amount}"/>'>
   <input type='hidden' name='keyword' value='<c:out value="${cri.keyword}"/>'>
   <input type='hidden' name='type' value='<c:out value="${cri.type}"/>'>  
- 
 </form>
 
 
@@ -74,6 +73,41 @@
     <!--  end panel-body -->
   </div>
   <!-- end panel -->
+  
+  <div>
+      <!-- 댓글 입력 폼 -->
+    <div class="mb-3">
+      <textarea class="form-control mb-2" rows="3" placeholder="댓글을 입력하세요..."></textarea>
+      <button class="btn btn-primary">댓글 작성</button>
+    </div>
+
+    <hr>
+
+    <!-- 댓글 리스트 -->
+    <div id="commentlist">
+	    <div class="comment mb-4">
+	      <div class="d-flex justify-content-between">
+	        <strong>user123</strong>
+	        <small class="text-muted">2025-05-22</small>
+	      </div>
+	      <p class="mb-1">좋은 글이네요!</p>
+	      <div>
+	        <button class="btn btn-sm btn-outline-secondary">수정</button>
+	        <button class="btn btn-sm btn-outline-danger">삭제</button>
+	      </div>
+	    </div>
+	    <div class="comment mb-4">
+	      <div class="d-flex justify-content-between">
+	        <strong>user456</strong>
+	        <small class="text-muted">2025-04-12</small>
+	      </div>
+	      <p class="mb-1">감사합니다!</p>
+	      <div>
+	<!--         <button class="btn btn-sm btn-outline-secondary">수정</button>
+	        <button class="btn btn-sm btn-outline-danger">삭제</button> -->
+	      </div>
+	    </div>
+  </div>
 </div>
 <!-- /.row -->
 

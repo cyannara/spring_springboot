@@ -4,20 +4,22 @@
 | :-- | :------------ | :------------------- | :------------- |
 | 1-1 | maven, gradle | sp01mvn , sp02gradle | com.yedam.demo |
 | 1-2 | DI            | sp02di               | com.yedam.di   |
-| 2-1 | AOP           | sp03aop              | com.yedam.aop  |
-| 2-2 | MyBatis       | sp04mybatis          | com.yedam.mybt |
-| 3-1 | JPA           | sp05jpa              | com.yedam.jpa  |
-| 3-2 | MVC           | sp06mvc              | com.yedam.mvc  |
+| 2-1 | MyBatis       | sp04mybatis          | com.yedam.mybt |
+| 2-2 |               |                      |                |
+| 3-1 | MVC           | sp06mvc              | com.yedam.mvc  |
+| 3-2 |               |                      |                |
 | 4-1 | 실습-게시판   | sp07boad             | com.yedam.web  |
-| 4-2 | REST API      |                      |                |
-| 5-1 | 실습-댓글     |                      |                |
-| 5-2 | 개인프로젝트  |                      | co.person.web  |
-| 6-1 | springboot    | sp08boot             | com.yedam.boot |
-| 6-2 | ThymeLeaf     |                      |                |
-| 7-1 | security      | sp09securiy          | com.yedam.secu |
-| 7-2 | eGovFrame     | sp10egov             |                |
-| 8-1 | eGovFrame     |                      | com.yedam.egov |
+| 4-2 |               |                      |                |
+| 5-1 | 검색과 페이징 |                      |                |
+| 5-2 | JS 복습       |                      |                |
+| 6-1 | 실습-댓글     |                      |                |
+| 6-2 | 개인프로젝트  |                      | co.person.web  |
+| 7-1 | AOP           | sp03aop              | com.yedam.aop  |
+| 7-2 | security      | sp09securiy          | com.yedam.secu |
+| 8-1 | eGovFrame     | sp10egov             | com.yedam.egov |
 | 8-2 | 시험          | exam01               | com.yedam.exam |
+
+springboot / ThymeLeaf / JPA
 
 ### 과제
 

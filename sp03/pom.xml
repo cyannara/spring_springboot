@@ -14,6 +14,7 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<springframework.version>6.2.7</springframework.version>
+		<org.aspectj-version>1.9.24</org.aspectj-version>
 	</properties>
 
 	<dependencies>
@@ -79,12 +80,14 @@
 			<scope>provided</scope>
 		</dependency>
 		
+		<!-- junit  -->
 		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<version>4.13.2</version>
+			<groupId>org.junit.jupiter</groupId>
+			<artifactId>junit-jupiter-api</artifactId>
+			<version>5.12.2</version>
 			<scope>test</scope>
 		</dependency>
+		
 		<!-- SLF4J → Log4j Bridge (Spring은 SLF4J를 통해 로깅) -->
 		<dependency>
 			<groupId>org.apache.logging.log4j</groupId>
@@ -103,6 +106,25 @@
 			<groupId>com.zaxxer</groupId>
 			<artifactId>HikariCP</artifactId>
 			<version>6.3.0</version>
+		</dependency>
+		
+				<!-- aop -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-aop</artifactId>
+			<version>${springframework.version}</version>
+		</dependency>
+		<!-- aspectjrt -->
+		<dependency>
+			<groupId>org.aspectj</groupId>
+			<artifactId>aspectjrt</artifactId>
+			<version>1.9.24</version>
+			<scope>runtime</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.aspectj</groupId>
+			<artifactId>aspectjweaver</artifactId>
+			<version>${org.aspectj-version}</version>
 		</dependency>
 	</dependencies>
 </project>

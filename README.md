@@ -15,8 +15,8 @@
 | 6-1 | 실습-댓글     |                      |                |
 | 6-2 | 개인프로젝트  |                      | co.person.web  |
 | 7-1 | AOP           | sp03aop              | com.yedam.aop  |
-| 7-2 | security      | sp09securiy          | com.yedam.secu |
-| 8-1 | eGovFrame     | sp10egov             | com.yedam.egov |
+| 7-2 | security      | sp08securiy          | com.yedam.secu |
+| 8-1 | eGovFrame     | sp09egov             | com.yedam.egov |
 | 8-2 | 시험          | exam01               | com.yedam.exam |
 
 springboot / ThymeLeaf / JPA
@@ -29,6 +29,8 @@ springboot / ThymeLeaf / JPA
 | 2일차 | 과제2.md | work02                                     |
 | 3일차 | 과제3.md | work03                                     |
 | 4일차 |          |                                            |
-| 5일차 |          | 도서관리 프로그램                          |
-| 6일차 |          | spring+jsp ==> springboot+thymeleaf로 구현 |
-| 7일차 |          |                                            |
+| 5일차 |          | 자바스크립트 DOM API                       |
+| 6일차 |          | 사원정보조회                               |
+| 7일차 |          | 도서관리                                   |
+| 8일차 |          |                                            |
+| 9일차 |          | spring+jsp ==> springboot+thymeleaf로 구현 |

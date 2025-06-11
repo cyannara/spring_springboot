@@ -4,11 +4,11 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.yedam</groupId>
-	<artifactId>sp06_mvc</artifactId>
+	<artifactId>sp03_aop</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
 
-	<name>sp06</name>
+	<name>sp03_aop</name>
 	<url>http://maven.apache.org</url>
 
 	<properties>
@@ -27,25 +27,7 @@
 			<artifactId>spring-test</artifactId>
 			<version>${springframework.version}</version>
 		</dependency>
-		<!--
-		https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind -->
-		<dependency>
-			<groupId>com.fasterxml.jackson.core</groupId>
-			<artifactId>jackson-databind</artifactId>
-			<version>2.19.0</version>
-		</dependency>
 
-		<!-- Servlet -->
-		<dependency>
-			<groupId>jakarta.servlet.jsp.jstl</groupId>
-			<artifactId>jakarta.servlet.jsp.jstl-api</artifactId>
-			<version>3.0.1</version>
-		</dependency>
-		<dependency>
-			<groupId>org.glassfish.web</groupId>
-			<artifactId>jakarta.servlet.jsp.jstl</artifactId>
-			<version>3.0.1</version>
-		</dependency>
 
 		<dependency>
 			<groupId>junit</groupId>
@@ -60,18 +42,41 @@
 			<scope>provided</scope>
 		</dependency>
 
-		<!-- SLF4J → Log4j Bridge (Spring은 SLF4J를 통해 로깅) -->
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-jdbc</artifactId>
+			<version>${springframework.version}</version>
+		</dependency>
+		<!-- ojdbc  -->
+		<dependency>
+			<groupId>com.oracle.database.jdbc</groupId>
+			<artifactId>ojdbc8</artifactId>
+			<version>23.2.0.0</version>
+		</dependency>
+		<!-- HikariCP -->
+		<dependency>
+			<groupId>com.zaxxer</groupId>
+			<artifactId>HikariCP</artifactId>
+			<version>6.3.0</version>
+		</dependency>	
+		<!-- mybatis-spring -->
+		<dependency>
+			<groupId>org.mybatis</groupId>
+			<artifactId>mybatis-spring</artifactId>
+			<version>3.0.4</version>
+		</dependency>
+		<dependency>
+			<groupId>org.mybatis</groupId>
+			<artifactId>mybatis</artifactId>
+			<version>3.5.19</version>
+		</dependency>	
+		
+				<!-- SLF4J → Log4j Bridge (Spring은 SLF4J를 통해 로깅) -->
 		<dependency>
 			<groupId>org.apache.logging.log4j</groupId>
 			<artifactId>log4j-slf4j-impl</artifactId>
 			<version>2.24.3</version>
-		</dependency>
-		<!--
-		https://mvnrepository.com/artifact/commons-fileupload/commons-fileupload -->
-	<!--	<dependency>
-			<groupId>commons-fileupload</groupId>
-			<artifactId>commons-fileupload</artifactId>
-			<version>1.5</version>
-		</dependency>-->
+		</dependency>	
 	</dependencies>
 </project>

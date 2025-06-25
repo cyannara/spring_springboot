@@ -18,7 +18,7 @@ http://www.springframework.org/schema/tx https://www.springframework.org/schema/
 		<security:intercept-url pattern="/admin/**" access="hasAuthority('ROLE_ADMIN')"/>
 		<security:intercept-url pattern="/**" access="isAuthenticated()"/>
 		<security:form-login default-target-url="/top.jsp"/>
-		<security:logout logout-url="/logout" logout-success-url="/top.jsp"/>
+		<security:logout logout-url="/logout" invalidate-session="true" logout-success-url="/top.jsp" success-handler-ref="logoutHandler"/>
 		<security:csrf disabled="true"/>
 	</security:http>
 	

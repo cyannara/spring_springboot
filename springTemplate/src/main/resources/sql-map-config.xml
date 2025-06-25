@@ -15,5 +15,6 @@
 		<!-- java.sql.Timestamp 를 java.util.Date 형으로 반환 -->
 		<typeHandler javaType="java.sql.Date"
 			handler="org.apache.ibatis.type.DateTypeHandler" />
+		<typeHandler handler="org.apache.ibatis.type.LocalDateTypeHandler" />
 	</typeHandlers>
 </configuration>

@@ -69,4 +69,4 @@ egov-com-servlet.xml 에 validation 빈 등록하고 annotation-driven 설정
 ```
 
 validator/validator-rules.xml  
-message/com/message-c0mmon.properties  
+message/com/message-common.properties  

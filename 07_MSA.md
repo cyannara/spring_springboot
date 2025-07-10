@@ -9,7 +9,7 @@ rabbitmq.exchange.name: mqtestexchange
 rabbitmq.routing.key: mqtestkey
 ```
 
-properites rabitMQ 설정 (mq2)
+properites rabitMQ 설정 (mq2 )
 
 ```
 rabbitmq.queue.name=mqtestqueue

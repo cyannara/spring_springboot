@@ -55,7 +55,7 @@ docker stop spring-app 2>/dev/null
 docker rm spring-app 2>/dev/null
 
 # 4. 새 컨테이너 실행
-docker run -d -p 8080:8080 -v/home/ec2-user/tomcat/logs:/usr/local/tomcat.logs -v/upload:/upload --name spring-app 도커계정/spring-app
+docker run -d -p 80:8080 -v/home/ec2-user/tomcat/logs:/usr/local/tomcat.logs -v/upload:/upload --name spring-app 도커계정/spring-app 
 ```
 
 ```

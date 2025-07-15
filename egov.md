@@ -41,3 +41,50 @@ COPY ${WAR_FILE} /usr/local/tomcat/webapps/ROOT.war
 EXPOSE 8080
 CMD ["catalina.sh", "run"]
 ```
+WAR 이름이 ROOT.war이면 Tomcat에서 기본 경로(/)로 자동 배포됨. 
+
+```
+# 1. WAR 빌드
+mvn clean install -DskipTests
+
+# 2. Docker 🐳 이미지 빌드
+docker build -t spring-legacy-app .
+
+# 3. 🧹기존 컨테이너 종료 및 삭제
+docker stop spring-app 2>/dev/null
+docker rm spring-app 2>/dev/null
+
+# 4. 새 컨테이너 실행
+docker run -d -p 8080:8080 -v/home/ec2-user/tomcat/logs:/usr/local/tomcat.logs -v/upload:/upload --name spring-app 도커계정/spring-app
+```
+
+```
+name: Spring Legacy CI/CD
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: ✅ Checkout
+        uses: actions/checkout@v3
+
+      - name: ☕️ Setup JDK
+        uses: actions/setup-java@v3
+        with:
+          java-version: '21'
+          distribution: 'adopt'
+
+      - name: 🔨 Build WAR with Maven
+        run: mvn clean install -DskipTests
+
+      - name: 🐳 Build Docker Image
+        run: docker build -t spring-legacy-app .
+
+      - name: 🚀 Deploy (optionally SSH to server)
+        run: echo "여기에 SSH 배포 코드 추가 가능"
+```

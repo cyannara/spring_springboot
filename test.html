@@ -1,0 +1,74 @@
+
+<html><div className="p-6 grid gap-6">
+      <h2 className="text-2xl font-bold">출하처리 (창고 화면)</h2>
+
+      <Card>
+        <CardContent className="grid grid-cols-3 gap-4 p-4">
+          <div>
+            <label className="text-sm">출하지시번호</label>
+            <Input placeholder="SH-20250717-0001" />
+          </div>
+          <div>
+            <label className="text-sm">출고창고</label>
+            <Select defaultValue="main">
+              <SelectTrigger><SelectValue placeholder="선택" /></SelectTrigger>
+              <SelectContent>
+                <SelectItem value="main">본사창고</SelectItem>
+                <SelectItem value="sub">2창고</SelectItem>
+              </SelectContent>
+            </Select>
+          </div>
+          <div>
+            <label className="text-sm">출하예정일</label>
+            <Input type="date" defaultValue="2025-07-18" />
+          </div>
+        </CardContent>
+      </Card>
+
+      <Card>
+        <CardContent className="p-4">
+          <table className="w-full text-sm border border-gray-300">
+            <thead className="bg-gray-100">
+              <tr>
+                <th className="border px-2 py-1">품목코드</th>
+                <th className="border px-2 py-1">품목명</th>
+                <th className="border px-2 py-1">지시수량</th>
+                <th className="border px-2 py-1">출고수량</th>
+                <th className="border px-2 py-1">로트</th>
+                <th className="border px-2 py-1">시리얼</th>
+                <th className="border px-2 py-1">피킹</th>
+                <th className="border px-2 py-1">포장</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td className="border px-2 py-1">A12345</td>
+                <td className="border px-2 py-1">모듈A</td>
+                <td className="border px-2 py-1 text-center">10</td>
+                <td className="border px-2 py-1"><Input defaultValue="10" /></td>
+                <td className="border px-2 py-1">
+                  <Select defaultValue="lot1">
+                    <SelectTrigger><SelectValue placeholder="로트 선택" /></SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="lot1">20250701</SelectItem>
+                      <SelectItem value="lot2">20250702</SelectItem>
+                    </SelectContent>
+                  </Select>
+                </td>
+                <td className="border px-2 py-1"><Input placeholder="시리얼 입력" /></td>
+                <td className="border px-2 py-1 text-center"><Checkbox /></td>
+                <td className="border px-2 py-1 text-center"><Checkbox /></td>
+              </tr>
+              {/* 다른 품목도 반복 */}
+            </tbody>
+          </table>
+        </CardContent>
+      </Card>
+
+      <div className="flex justify-end gap-2">
+        <Button variant="secondary">피킹리스트 출력</Button>
+        <Button variant="outline">출고수량 자동입력</Button>
+        <Button variant="default">출하완료 처리</Button>
+      </div>
+    </div>
+</html>    

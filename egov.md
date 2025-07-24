@@ -1,32 +1,7 @@
 ## [eGovFrame](https://www.egovframe.go.kr/home/main.do)
 
-### 설치
-1. 다운로드 -> 개발환경 -> 4.x 다운로드 > 개발자용 개발환경 for Windows 64bit (Implementation Tool) Version 4.3.0 첨부파일 다운받기  
-2. eGovFrameDev-4.3.0-64bit.zip 파일 C:\ 에 하위폴더 생성 체크해서 압축해제하기  
 
-```
-c:\
-  ┗━ eGovFrameDev-4.3.0-64bit
-    ┗━ eclipse
-    ┗━ workspace-egov
-```
-#### 템플릿 프로젝트 생성 
-1. eclipse -> file -> new -> eGovFrame Template Project -> Common all-in-one 선택  
-<img src="images/egov01.png" width="500"/>  
 
-2. project name은 `all`, group Id 는 `com.company` 입력  
-
-### 데이터베이스 사용자 계정 생성하고 테이블 생성
-1. 사용자 계정 생성
-```
-SQL> 
-conn system/oracle
-create user com identified by com01;
-grant connect, resource, create view to com;
-```
-2. script\ddl\oracle\com_DDL_oracle.sql 파일 실행
-3. script\comment\oracle\egov_oracle_comment.sql 파일 실행
-4. script\dml\oracle\com_DML_oracle.sql 파일 실행
 
 [230403 공공기관의 데이터베이스 표준화 지침 개정 전문](https://www.mois.go.kr/frt/bbs/type001/commonSelectBoardArticle.do?bbsId=BBSMSTR_000000000016&nttId=99662#none)  
 [행정정보데이터베이스 표준화지침](https://www.law.go.kr/LSW/admRulInfoP.do?admRulSeq=63593)  
@@ -59,6 +34,10 @@ hp varchar2(20));
 #{egovEnvCryptoService.getPassword()}
 ```
 
+
+EgovComAbstractDAO
+
+
 ### 공통컴포넌트 패키지 정의서
 
 [공통컴포넌트 클래스 구조](https://www.egovframe.go.kr/home/qainfo/qainfoRead.do?qaId=QA_00000000000024397)
@@ -77,6 +56,11 @@ ROLE_ADMIN > ROLE_USER
 - psl : Persistence Layer  
 - fdl : Foundation Layer  
 - ptl : Presentation Layer  
+
+
+
+
+
 
 
 

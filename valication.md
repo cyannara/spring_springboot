@@ -1,3 +1,68 @@
+# thymeleaf
+
+### 1. pom.xml 라이브러리 지정  
+```xml
+		<!-- https://mvnrepository.com/artifact/org.thymeleaf/thymeleaf -->
+		<dependency>
+			<groupId>org.thymeleaf</groupId>
+			<artifactId>thymeleaf-spring5</artifactId>
+			<version>3.0.11.RELEASE</version>
+		</dependency>
+		<dependency>
+			<groupId>nz.net.ultraq.thymeleaf</groupId>
+			<artifactId>thymeleaf-layout-dialect</artifactId>
+			<version>3.0.0</version>
+		</dependency>
+```
+
+### 2. viewResolver 빈 등록  
+```xml
+	<!-- Thymeleaf -->
+	<bean id="thyTemplateResolver"
+		class="org.thymeleaf.spring5.templateresolver.SpringResourceTemplateResolver"
+		p:prefix="/WEB-INF/views/" p:suffix=".html"
+		p:characterEncoding="UTF-8" p:cacheable="false" />
+
+	<bean id="thyTemplateEngine"
+		class="org.thymeleaf.spring5.SpringTemplateEngine"
+		p:templateResolver-ref="thyTemplateResolver">
+		<property name="additionalDialects">
+			<set>
+				<bean
+					class="nz.net.ultraq.thymeleaf.layoutdialect.LayoutDialect"></bean>
+			</set>
+		</property>
+	</bean>
+
+	<bean id="thyViewResolver"
+		class="org.thymeleaf.spring5.view.ThymeleafViewResolver"
+		p:templateEngine-ref="thyTemplateEngine" p:characterEncoding="UTF-8"
+		p:order="1" p:viewNames="*.html" />
+
+
+	<bean
+		class="org.springframework.web.servlet.view.UrlBasedViewResolver"
+		p:order="2"
+		p:viewClass="org.springframework.web.servlet.view.JstlView"
+		p:prefix="/WEB-INF/jsp/" p:suffix=".jsp" />
+
+	<bean id="jsonView"
+		class="org.springframework.web.servlet.view.json.MappingJackson2JsonView">
+		<property name="contentType"
+			value="application/json;charset=UTF-8" />
+	</bean>
+```
+
+### 3. 컨트롤러  
+```java
+	/*  게시글 목록 페이지 */
+	@GetMapping("/board/articleList.do")
+	public String articleList(@RequestParam("bbsId") String bbsId, Model model) {
+		model.addAttribute("bbsId", bbsId);
+		return "board/articleList.html";
+	}
+```
+
 # valication
 - [spring validation](https://docs.spring.io/spring-framework/reference/core/validation/validator.html)
 

@@ -205,7 +205,7 @@ public class AnimalTest {
 - List
   - 순서(인덱스)가 있는 자료구조
   - 중복 데이터 허용
-    . Set
+- Set
   - 순서(인덱스) 없음
   - 중복 허용하지 않음
 - Map

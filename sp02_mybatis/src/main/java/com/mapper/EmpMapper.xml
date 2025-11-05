@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mapper.EmpMapper">
+
+	<select id="selectall" resultType="Employee">
+		SELECT *
+		  FROM EMPLOYEES
+	</select>
+	
+	<select id="selectone" resultType="map">
+		SELECT * 
+		  FROM EMPLOYEES
+		 WHERE EMPLOYEE_ID = #{id} 
+	</select>
+	
+</mapper>

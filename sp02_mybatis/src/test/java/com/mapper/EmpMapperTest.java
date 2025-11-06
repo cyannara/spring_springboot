@@ -10,6 +10,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
+import com.yedam.mapper.EmpMapper;
+import com.yedam.mapper.Employee;
+
 @ExtendWith(SpringExtension.class)
 @ContextConfiguration("classpath:spring/datasource-context.xml")
 public class EmpMapperTest {

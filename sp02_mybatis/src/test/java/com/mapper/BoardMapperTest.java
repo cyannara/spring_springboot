@@ -11,6 +11,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
+import com.yedam.mapper.BoardMapper;
+import com.yedam.mapper.BoardVO;
+import com.yedam.mapper.ReplyVO;
+
 @ExtendWith(SpringExtension.class)
 @ContextConfiguration("classpath:spring/datasource-context.xml")
 public class BoardMapperTest {

@@ -1,4 +1,4 @@
-package com.mapper;
+package com.yedam.mapper;
 //DTO, DO, VO
 
 import java.util.Date;

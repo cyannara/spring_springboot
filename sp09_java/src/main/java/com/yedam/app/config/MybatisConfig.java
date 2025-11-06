@@ -16,14 +16,24 @@ import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
 public class MybatisConfig {
 	
 	@Autowired DataSource dataSource;
+	
 	@Bean
 	public SqlSessionFactory sqlSessionFactory() throws Exception {
 		SqlSessionFactoryBean sqlSessionFactoryBean = new SqlSessionFactoryBean();
+		
+		//dataSource
 		sqlSessionFactoryBean.setDataSource(dataSource);
 		
+		//MapperLocation
 		Resource[] resources = new PathMatchingResourcePatternResolver()
 	            .getResources("classpath:/mappers/**/*.xml");
 		sqlSessionFactoryBean.setMapperLocations(resources);
+		
+		//configLocation
+		Resource configresource = new PathMatchingResourcePatternResolver()
+	            .getResource("classpath:/sql-map-config.xml");
+		sqlSessionFactoryBean.setConfigLocation(configresource);
+		
 		return sqlSessionFactoryBean.getObject();
 	}
 }

@@ -1,4 +1,4 @@
-package com.mapper;
+package com.yedam.mapper;
 
 import java.util.List;
 import java.util.Map;

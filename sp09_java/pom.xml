@@ -4,11 +4,11 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.yedam</groupId>
-	<artifactId>sp09</artifactId>
+	<artifactId>sp09_java</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>sp09</name>
+	<name>sp09_java</name>
 	<url>http://maven.apache.org</url>
 
 	<properties>

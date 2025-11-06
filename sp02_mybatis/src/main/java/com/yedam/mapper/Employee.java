@@ -1,4 +1,4 @@
-package com.mapper;
+package com.yedam.mapper;
 //Employee 테이블 구조
 
 import java.util.Date;
